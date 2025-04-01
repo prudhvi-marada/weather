@@ -4,11 +4,11 @@ TAILWIND CSS (V4.0)
 In the latest version of Tailwind CSS, modifying the tailwind.config.js file is not required for most typical use cases.
 
 To Install :
-           npm install tailwindcss @tailwindcss/cli
+           npm install tailwindcss @tailwindcss/cli,
 In css File :
-           @import "tailwindcss"; (add this)
+           @import "tailwindcss"; (add this),
 link to output css file :
-           <link href="./output.css" rel="stylesheet"> (put it in head )
+           <link href="./output.css" rel="stylesheet"> (put it in head ),
 To Run :
 
   To Execute Tailwind: 
