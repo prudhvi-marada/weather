@@ -12,19 +12,19 @@
     <header class="text-center text-2xl font-bold  py-6 rounded-md bg-[url(assets/images/weather.jpg)] bg-cover bg-center">
         Weather Application
     </header>
-
+   <main>
     <!-- Main Content -->
     <div class="mt-5 flex flex-col md:flex-row gap-6">
         
         <!-- Left Section -->
         <div class=" p-6 shadow-md rounded-md w-full md:w-1/4 bg-amber-50 m-3">
-            <h2 class="text-lg font-semibold">Search Weather</h2>
+            <h2 class="text-lg font-semibold">Search City</h2>
             <input type="text" id="cityInput" class="w-full p-2 mt-2 border rounded" placeholder="Enter city name">
-            <select id="dropdown" class="p-2 mt-4 hidden border rounded">
+            <select id="dropdown" class="p-2 mt-4 hidden border rounded w-full">
                 <option value="">Select a recently searched city</option>
               </select>
-            <button id="searchBtn" class="w-full bg-blue-500 text-white p-2 mt-2 rounded">Search</button>
-            <button id="locationBtn" class="w-full bg-green-500 text-white p-2 mt-2 rounded">Use Current Location</button>
+            <button id="searchBtn" class="w-full bg-blue-500 text-white p-2 mt-2 rounded hover:bg-orange-500">Search</button>
+            <button id="locationBtn" class="w-full bg-green-500 text-white p-2 mt-2 rounded hover:bg-orange-500">Use Current Location</button>
         </div>
 
         <!-- Right Section -->
@@ -40,6 +40,7 @@
                         <h2 id="placeName" class="text-xl font-semibold"></h2>
                         <p id="time" class="text-gray-600"></p>
                         <p id="temperature" class="text-2xl font-bold mt-2"></p>
+                        <p id="wind" class="text-2xl font-bold mt-2" ></p>
                         <p id="humidity" class="text-gray-600"></p>
                     </div>
                     <div class="flex items-center justify-center">
@@ -64,5 +65,6 @@
     
 
     <script src="src/script.js"></script>  
+    </main>
 </body>
 </html>
