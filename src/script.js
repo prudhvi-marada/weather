@@ -14,7 +14,7 @@ const imgElement = document.getElementById("imgElement");
 const conditionElement = document.getElementById("condition");
 const Dropdown = document.getElementById('dropdown');
 const windElement = document.getElementById("wind");
-
+const headingElement=document.getElementById("heading")
 // Fetch weather data based on  city name
 async function fetchWeather(city, apiKey) {
     try {
@@ -66,6 +66,8 @@ function WeatherUI(city, temp, humidity, condition, icon,wind) {
 
 // Update UI for 5-day forecast
 function ForecastUI(forecastList) {
+    headingElement.textContent="Next 5 days ForeCast"
+    headingElement.className="text-3xl text-white font-bold text-center hover:text-yellow-600"
     forecastContainer.innerHTML = "";
     for (let i = 0; i < 5; i++) {
         const dayData = forecastList[i];
@@ -76,7 +78,7 @@ function ForecastUI(forecastList) {
         const card = document.createElement("div");
          const icon = dayData.weather[0].icon;
          const windSpeed = dayData.wind.speed;
-        card.className = "rounded shadow-md m-5 hover:brightness-[1.75]";
+        card.className = "rounded shadow-md m-4 hover:brightness-[1.75]";
          card.classList.add("card-style")
         card.innerHTML = `
                 <div class="bg-gradient-to-b from-blue-100 to-blue-300 w-48 p-4 rounded-2xl shadow-lg text-center space-y-2">

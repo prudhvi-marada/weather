@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Application</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!--  <script src="https://cdn.tailwindcss.com"></script> --> <!-- The Play CDN is designed for development purposes only, and is not intended for production.(info from tailwind.com website),used while building-->
+  <link href="./src/output.css" rel="stylesheet"> 
 </head>
-<body class="h-full bg-[url(assets/images/weather_1.jpg)] bg-cover bg-center bg-no-repeat">
-    
+<body class=" " style="background-image: url('assets/images/weather_1.jpg'); background-size:cover; background-repeat:no-repeat; background-position: center;">
     <!-- Header -->
-    <header class="text-center text-2xl font-bold  py-6 rounded-md bg-[url(assets/images/weather.jpg)] bg-cover bg-center">
-        Weather Application
+    <header class="text-center text-2xl font-bold  py-6 rounded-md" style="background-image: url('assets/images/weather.jpg'); background-size: cover; background-repeat:no-repeat ;">
+        Weather Application 
     </header>
    <main>
     <!-- Main Content -->
     <div class="mt-5 flex flex-col md:flex-row gap-6">
         
         <!-- Left Section -->
-        <div class=" p-6 shadow-md rounded-md w-full md:w-1/4 bg-amber-50 m-3">
+        <div class=" p-6 shadow-md rounded-md w-full h-70 md:w-1/4 bg-amber-50 m-3">
             <h2 class="text-lg font-semibold">Search City</h2>
             <input type="text" id="cityInput" class="w-full p-2 mt-2 border rounded" placeholder="Enter city name">
             <select id="dropdown" class="p-2 mt-4 hidden border rounded w-full">
@@ -28,10 +28,9 @@
         </div>
 
         <!-- Right Section -->
-        <div class="w-full h-300 bg-transparent m-10 ">
-  
+        <div class="w-full  bg-transparent m-5 ">
             <!-- Right Upper Section (Weather Details) -->
-            <div class=" p-6 h-100 shadow-md rounded-md text-center" id="back-ground">
+            <div class=" p-6 h-70 shadow-md rounded-md text-center" id="back-ground">
                 
                 <h1 id="head" class="font-bold text-[50px] text-[#FFA07A] brightness-50">Welcome To weather Forecast Application</h1>
                 <h2 id="para" class="font-bold text-[30px] text-white">🌦️ "Stop staring at the sky like a lost weather prophet! ⛈️ Just type a city name and let me do the hard work!" </h2>
@@ -50,12 +49,14 @@
                 </div>
             </div>
 
-            <!-- Right Lower Section (5-Day Forecast) -->
+                              
+           
             
         </div>
      </div>
+         <!-- Right Lower Section (5-Day Forecast) -->
         <div class="mt-5">
-            <h3 class="text-lg font-semibold  text-center"></h3>
+            <h3 class="text-lg font-semibold  text-center" id="heading"></h3>
             <div id="forecastContainer" class="flex flex-row justify-evenly flex-wrap">
                 <!-- Forecast cards will be inserted here dynamically -->
             </div>

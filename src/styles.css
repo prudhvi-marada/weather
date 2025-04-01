@@ -1,2 +1,9 @@
 @import "tailwindcss";
 
+
+
+/* 
+@tailwind base;
+@tailwind components;        no longer needed in latest version
+@tailwind utilities;
+*/
